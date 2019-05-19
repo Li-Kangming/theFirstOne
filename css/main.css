@@ -1,0 +1,555 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+a {
+   text-decoration: none;
+   color: #4bacfe; 
+}
+
+ul li {
+    list-style: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+.mr20 {
+    margin-right: 20px;
+}
+
+.p60 {
+    display: inline-block;
+    width: 60%;
+}
+.p40 {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+}
+
+.tac {
+    text-align: center;
+}
+/* 清除浮动 */
+clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content:"";
+    clear: both;
+    height:0;
+}
+/* 移入自定义字体 */
+@font-face { 
+    font-family:'iconfont';
+    src: url('../iconfont/font_3uiping51xt/iconfont.eot');/*IE9*/
+    src: url('../iconfont/font_3uiping51xt/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../iconfont/font_3uiping51xt/iconfont.woff') format('woff'),/*chrome、firefox*/
+    url('../iconfont/font_3uiping51xt/iconfont.ttf') format('truetype'),/*chrome、firefox、opeta、Safari,IOS 4.2+*/
+    url('../iconfont/font_3uiping51xt/iconfont.svg') format('svg');/*IOS 4.1-*/
+}
+.iconfont {
+    font-family: "iconfont"!important;
+    float: left;
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+.iconfont:hover {
+    cursor: pointer;
+}
+.f12 {
+    clear:both;
+    font-size: 12px;
+}
+.clear {
+    float: none;
+}
+/* 导航顶部 */
+#ct-top {
+    height: 80px;
+    background: #005ca1;
+    background-image: url(../images/erweima/125646166.png);
+    background-position: center;
+}
+
+#ct-top .container {
+    width: 1240px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#ct-top #ct-logo {
+    float: left;
+    display: flex;
+    margin-top: 12px;
+}
+#ct-top #ct-login {
+    float: right;
+    display: flex;
+    margin-top: -62px;
+}
+#ct-top #ct-middle {
+    width: 490px;
+    height: 80px;
+    margin-left: 435px;
+    font-size: 0;
+    vertical-align: bottom;
+}
+
+
+#ct-top #ct-logo #logo {
+    width: 210px;
+    height: 60px;
+    background-position: 0 0;
+    overflow: hidden;
+}
+#ct-top #ct-logo #ct-links {
+    color: #4bacfe;
+    margin-left: 26px;
+    margin-top: 30px;
+    padding-top: 12px;
+    font-size: 12px;
+}
+
+#ct-top #ct-logo #ct-links a:hover {
+    text-decoration: underline;
+}
+
+
+#ct-top #ct-middle .nba-header-middle-img-wide {
+    width: 600px;
+}
+
+#ct-top #ct-middle .nba-header-middle-img-thin {
+    width: 350px;
+    display: none;
+}
+
+
+#ct-top #ct-login .qqcom-login {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+#ct-top #ct-login .qqcom-login .headImg img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#ct-top #ct-login .qqcom-login .smallQQ {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#ct-top #ct-login .sports-vip-status{
+    margin-top: 10px;
+    padding-left: 40px;
+    font-size: 14px;
+    background-image: url(../images/erweima/sports_vip_shield.png);
+    background-repeat: no-repeat;
+}
+
+/* 导航栏 */
+#ct-nav {
+    height: 50px;
+    line-height: 50px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-image: url(../images/erweima/header_nav_bg.png);
+    position:relative;
+}
+#ct-nav #navList li {
+    float: left;
+    margin-left: 45px;
+}
+#navList a {
+    font-size: 18px;
+    color: #fff;
+}
+/* 显示内容 */
+.direction-arrow {
+    display: block;
+    width: 94%;
+    position: absolute;
+    left: 40px;
+    top: 50px;
+    z-index: 5;
+}
+.direction-arrow>span.arrow {
+    display: none;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border:10px solid transparent;
+    border-bottom: 17px solid rgb(0, 119, 255);
+    position:absolute;
+    top: -27px;
+
+}
+#video-detail{
+    width: 100%;
+    background: rgb(0, 119, 255);
+}
+#basketstar {
+    width: 100%;
+    background: #fff;
+    border:1px solid rgb(55, 0, 255);
+    border-bottom-color: red;
+    border-top-color: red;
+}
+
+/* 视频下拉详情内容 */
+#video-detail p a{
+    margin-left: 10px;
+}
+#video-detail p a:not(:last-child)::after{
+    content: "|";
+    margin-left: 5px;
+    color: #fff;
+}
+#video-detail .moment {
+    display: flex;
+    align-content: space-between;
+}
+#video-detail .ball-icon {
+    display: inline-block;
+    width: 18%;
+    background-image: url(../images/erweima/icon_schedule_whole_v2-df2f3ddad7.png);
+    background-position: 61px 20px;
+    background-repeat: no-repeat;
+    background-size: 310px;
+}
+#video-detail .moment .moment-item {
+    position: relative;
+    width: 19%;
+    margin-left: 15px;
+}
+#video-detail .moment .moment-item img {
+    width: 100%;
+    height: 120px;
+}
+#video-detail .moment .moment-item .icon-v,
+#video-detail .moment .moment-item .icon-text {
+    position: absolute;
+    left: 10px;
+    bottom: 60px;
+    font-size: 30px;
+}
+#video-detail .moment .moment-item .icon-text {
+    width: 100%;
+    left: 0;
+    bottom: 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+/* 球员下拉详情内容 */
+#basketstar p {
+    width: 100%;
+    background-color:blue;
+}
+#basketstar p>span {
+    display: block;
+    position: relative;
+    width:11%;
+    height: 100%;
+    color: #fff;
+    background-color: rgb(204, 19, 19);
+}
+#basketstar p span::after {
+    content:"";
+    display: block;
+    position: absolute;
+    right:-50px;
+    top:0;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: rgb(204, 19, 19);
+}
+#basketstar .star-detail{
+    display: inline-block;
+    width: 8%;
+    margin-left: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+#basketstar .star-detail img {
+    width: 80%;
+    border-radius: 50%;
+}
+/* 球队 */
+.of {
+    overflow: hidden;
+}
+.team {
+    display: none;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid red;
+}
+.team .team-detail {
+    display: inline-block;
+    width: 48%;
+}
+.team .team-detail p>span:first-child{
+    positioN: relative;
+    color: #fff;
+    background-color: rgb(179, 28, 128);
+    display: block;
+    width: 25%;
+}
+
+.team .team-detail p>span.row-being {
+    position: relative;
+    float: left;
+    display: block;
+    margin-left: 9%;
+    width:66%;
+    height:50px;
+    background: rgb(0, 102, 255);
+}
+
+.team .team-detail p>span.row-being::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-bottom-color: rgb(0, 102, 255);
+    position: absolute;
+    left: -50px;
+    top: -50px;
+}
+
+.team .team-detail p>span:first-child:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top-color: rgb(179, 28, 128);;
+    position: absolute;
+    right: -33%;
+    top: 0px;
+}
+.team .team-detail>div::after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content:"";
+    clear: both;
+    height:0;
+}
+.team .team-detail>div>span{
+   position: relative;
+   bottom: 25px;
+}
+.team .team-detail>div img{
+    width: 10%;
+    margin: 5px;
+}
+
+/* 赛程安排表 */
+#timetable {
+    width: 94%;
+    margin:10px auto;
+}
+#timetable .showList{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+#timetable .showList>p:hover {
+    cursor: pointer;
+    color: rgb(209, 40, 40);
+}
+#timetable #gameCount  p{
+    width: 84%;
+    word-wrap: break-word;
+    margin-top: 40%;
+} 
+#timetable>.showList>div:first-child, #timetable>.showList>div:last-child{
+    width: 8%;
+    height:110px;
+    background: #ccc;
+    text-align: center;
+    color: rgba(211, 17, 17, 0.8);;
+    border-left: 2px solid red;
+}
+#timetable>.showList>div:last-child {
+    line-height: 0;
+    border:0;
+    border-right:2px solid red;
+}
+#timetable>.showList>div:last-child:hover .icon{
+    background-position: 18px 10px;
+    cursor: pointer;
+}
+#timetable>.showList>div:last-child:hover {
+    color: #fff;
+    background-color: rgba(211, 17, 17, 0.8);
+    cursor: pointer;
+}
+#timetable .game-content {
+    width: 84.5%;
+    margin-left: 10px;
+}
+#timetable .game-detail {
+    width: 19.4%;
+    display: inline-block;
+    /* box-shadow: -1px -3px rgb(243, 241, 241); */
+    border: 1px solid rgb(245, 242, 242);
+    border-top: 2px solid #ccc;
+}
+#timetable .game-detail:hover {
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+#timetable .game-detail ul {
+    margin: 0 20px;
+}
+#timetable .game-detail li {
+    margin: 5px 0;
+}
+#timetable .game-detail li>p {
+    color: rgb(19, 19, 224);
+}
+#timetable .game-detail  li>p:hover {
+    color: rgb(209, 12, 12);
+}
+
+
+#timetable div.basket-icon .icon{
+    height: 78px;
+    background-image: url(../images/erweima/icon_schedule_whole_v2-df2f3ddad7.png);
+    background-repeat: no-repeat;
+    background-position: -85px 10px;
+}
+/* 精彩视频 */
+#playBack {
+    width: 94%;
+    margin: 0 auto;
+}
+#playBack .videoList {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+#playBack .videoList li {
+    position: absolute;
+    left: 200;
+    top: 0;
+}
+#playBack .videoList li video {
+    width: 100%;
+    height: 100%;
+}
+.arrowBox {
+    opacity: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.prev, .next {
+    width: 76px;
+    height: 112px;
+    position: absolute;
+    top: 50%;
+    margin-top: -56px;
+    background: url(../images/arrow/prev.png) no-repeat;
+    z-index: 99;
+}
+.next {
+    right: 0;
+    background-image: url(../images/arrow/next_1.png)
+}
+.current {
+
+}
+
+/* 广告1 */
+.ad-1 {
+    width: 94%;
+    margin: 0 auto;
+}
+
+.ad-1 img {
+    width: 100%;
+}
+
+
+/* 新闻 */
+#nab-content{
+    width:94%;
+    margin: 10px auto;
+}
+#nab-content .c-l dl dt{
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: blod;
+}
+
+#nab-content .c-l  dd p{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* 底部详情样式 */
+#footer {
+    width: 100%;
+    background-color:#1d68da;
+}
+#footer .navList {
+    color: #4bacfe;
+    border-bottom: 2px solid #164c9c;
+    padding: 20px 30px;
+}
+#footer .navList a {
+    margin: 10px;
+}
+
+#footer .About {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+#footer .About dt {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#footer .About dd {
+    color: #4bacfe;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#footer .footer-thing {
+    width: 60%;
+    margin:20px auto;
+    padding: 35px;
+    text-align: center;
+    color: #4bacfe;
+}
+#footer .footer-thing a:not(:first-child)::before {
+    content: "|";
+    margin: 0 5px;
+}
